@@ -23,8 +23,8 @@ img {
 }
 
 div {
-    margin-left: 2%;
-    margin-right: 2%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .button,
@@ -65,4 +65,118 @@ div {
 
 .button:hover {
     width: 200px;
+}
+
+
+.button:nth-child(1) span,
+.fa-github {
+    /* Color of the icon and span (Github) */
+    color: #333;
+}
+
+.button:nth-child(2) span,
+.fa-twitter {
+    /* Color of the icon and span (Twitter) */
+    color: #1D9BF0;
+}
+
+.button:nth-child(3) span,
+.fa-instagram {
+    /* Gradient color of the icon and span (Insta) */
+    background-image: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306c, #FD1d1D);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.button:nth-child(4) span,
+.fa-youtube {
+    /* Color of the icon and span (Youtube) */
+    color: #FF0000;
+}
+
+.button:nth-child(5) span {
+    /* Color of the span (all letter of tiktok without the o) (Tiktok) */
+    color: #111;
+}
+
+.fa-tiktok,
+.button:nth-child(5) span .o {
+    /* Color of the icon and letter O present in tiktok (Tiktok) */
+    color: #111;
+    filter: drop-shadow(1px 0px 0px #FD3E3E) drop-shadow(-1px -1px 0px #4DE8F4);
+    margin-left: initial;
+}
+
+.button:nth-child(6) span,
+.fa-twitch {
+    /* Color of the icon and span (Twitch) */
+    color: #6441A5;
+}
+
+.button:nth-child(7) span,
+.fa-spotify {
+    /* Color of the icon and span (Spotify) */
+    color: #1DB954;
+}
+
+.button:nth-child(8) span,
+.fa-snapchat {
+    /* Color of the icon and span (Snap) */
+    color: #FFFC00;
+}
+
+.button:nth-child(9) span,
+.fa-discord {
+    /* Color of the icon and span (Discord) */
+    color: #7289DA;
+}
+
+.button:nth-child(10) span {
+    /* Color of the span (TvTime) */
+    color: #F9D457;
+}
+
+.button:nth-child(11) span {
+    /* Color of the span (MyAnimeList) */
+    color: #2E51A2;
+}
+
+.button:nth-child(12) span {
+    /* Color of the span (Anilist) */
+    color: #1E2630;
+}
+
+.button:nth-child(13) span {
+    /* Color of the span (Gleeph) */
+    color: #252525;
+}
+
+.button:nth-child(14) span {
+    /* Color of the span (Wattpad) */
+    color: #FF4F0B;
+}
+
+.button:nth-child(15) span {
+    /* Color of the span (Epic Games) */
+    color: #333;
+}
+
+.button:nth-child(16) span,
+.fa-steam {
+    /* Gradient color of the icon and span (Steam) */
+    background-image: linear-gradient(120deg, #00ADEE, #000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.button:nth-child(17) span {
+    /* Color of the span (Gog) */
+    color: #0f0f0f;
+}
+
+.button:nth-child(18) span {
+    /* Color of the span (Uplay) */
+    color: #788532;
 }
