@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+
+/* Reset General */
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html,
+body {
+    font-family: "Poppins", sans-serif;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    background: linear-gradient(315deg, #fff 0%, #d7e1ec 74%);
+}
+
+h1 {
+    text-align: center;
+    padding: 10px 5%;
+    /* (top : 10px, bot: 5%) */
+}
+
+/* Container that encompasses the three divs */
+.container {
+    display: flex;
+    flex-direction: row;
+}
+
+/* First div (left) */
+.left {
+    width: 5%;
+    background: yellow;
+}
+
+/* Second div (middle, all buttons) */
+.SocialMediaButtons {
+    width: calc(95% - 261px);
+    place-items: center;
+    text-align: center;
+}
+
+/* Third div (right) */
+.right {
+    background-color: lightblue;
+    width: 261px;
+    max-width: 261px;
+}
+
+.button {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+
+    overflow: hidden;
+    cursor: pointer;
+
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    transition: all 0.3s ease-out;
+    background-color: #fff;
+}
+
+.button .icon,
+.button .iconLocal {
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+
+    border-radius: 50px;
+    transition: all 0.3s ease-out;
+}
+
+.button span {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+}
+
+.button:hover {
+    width: 200px;
+}
+
+
+.button:nth-child(1) span,
+.fa-github {
+    /* Color of icon & span (Github) */
+    color: #333;
+}
+
+.button:nth-child(1):hover .icon {
+    /* Color of icon background (Github) during a hover */
+    background: #333;
+}
+
+.button:nth-child(2) span,
+.fa-twitter {
+    /* Color of icon & span (Twitter) */
+    color: #1D9BF0;
+}
+
+.button:nth-child(2):hover .icon {
+    /* Color of icon background (Twitter) during a hover */
+    background: #1D9BF0;
+}
+
+.button:nth-child(3) span,
+.fa-instagram {
+    /* Gradiant color of icon & span (Insta) */
+    background-image: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.button:nth-child(3):hover .icon {
+    /* Gradiant color of icon background (Insta) during a hover */
+    background-image: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.button:nth-child(3):hover .icon .fa-instagram {
+    /* Color of icon and it background (Insta) during a hover */
+    background: transparent;
+    color: whitesmoke;
+}
+
+.button:nth-child(4) span,
+.fa-youtube {
+    /* Color of icon & span (Youtube) */
+    color: #ff0000;
+}
+
+.button:nth-child(4):hover .icon {
+    /* Color of background icon (Youtube) during a hover */
+    background: #ff0000;
+}
+
+.fa-tiktok,
+.button:nth-child(5) span .o {
+    /* Anaglyph color of icon and the letter "o" in "Tiktok" (TikTok) */
+    color: #111111;
+    filter: drop-shadow(1px 0px 0px #FD3E3E) drop-shadow(-1px -1px 0px #4DE8F4);
+    margin-left: initial;
+}
+
+.button:nth-child(5) span {
+    /* Color of span (TikTok, all letters without "o" in "Tiktok") */
+    color: #111111;
+}
+
+.button:nth-child(5):hover .icon {
+    /* Color of icon background (Tiktok) during a hover */
+    background: #111111;
+}
+
+.button:nth-child(6) span,
+.fa-twitch {
+    /* Color of icon & span (Twitch) */
+    color: #6441A5;
+}
+
+.button:nth-child(6):hover .icon {
+    /* Color of icon background (Twitch) */
+    background: #6441A5;
+}
+
+.button:nth-child(7) span,
+.fa-spotify {
+    /* Color of icon & span (Spotify) */
+    color: #1DB954;
+}
+
+.button:nth-child(7):hover .icon {
+    /* Color of icon background (Spotify) during a hover */
+    background: #1DB954;
+}
+
+.button:nth-child(8) span,
+.fa-snapchat {
+    /* Color of icon & span (Snapchat) */
+    color: #FFFC00;
+
+}
+
+.button:nth-child(8):hover .icon {
+    /* Color of icon background (Snapchat) during a hover */
+    background: #FFFC00;
+}
+
+.button:nth-child(9) span,
+.fa-discord {
+    /* Color of icon & span (Discord) */
+    color: #7289DA;
+}
+
+.button:nth-child(9):hover .icon {
+    /* Color of icon background (Discord) during a hover */
+    background: #7289DA;
+}
+
+.button:nth-child(10) span {
+    /* Color of span (TvTime) */
+    color: #F9D457;
+}
+
+.button:nth-child(11) span {
+    /* Color of span (MyAnimeList) */
+    color: #2E51A2;
+}
+
+.button:nth-child(12) span {
+    /* Color of span (Anilist) */
+    color: #1E2630;
+}
+
+.button:nth-child(13) span {
+    /* Color of span (Gleeph) */
+    color: #252525;
+}
+
+.button:nth-child(14) span {
+    /* Color of span (Wattpad) */
+    color: #FF4F0B;
+}
+
+.button:nth-child(15) span {
+    /* Color of span (Epic Games) */
+    color: #333;
+}
+
+.button:nth-child(16) span,
+.fa-steam {
+    /* Gradient color of icon & span (Steam) */
+    background-image: linear-gradient(120deg, #00ADEE, #000);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.button:nth-child(16):hover .icon {
+    /* Gradient color of icon background (Steam) during a hover */
+    background-image: linear-gradient(120deg, #00ADEE, #000);
+}
+
+.button:nth-child(16):hover .icon.fa-steam {
+    /* Color of icon (Steam) during a hover */
+    background: transparent;
+    color: whitesmoke;
+}
+
+.button:nth-child(17) span {
+    /* Color of the span (Gog) */
+    color: #0f0f0f;
+}
+
+.button:nth-child(18) span {
+    /* Color of the span (Uplay) */
+    color: #788532;
+}
+
+/****************************************/
+.button:hover .fab {
+    /* Color of icons during a hover */
+    color: whitesmoke;
+}
