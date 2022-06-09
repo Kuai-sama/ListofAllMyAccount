@@ -17,16 +17,19 @@ body {
     background: linear-gradient(315deg, #fff 0%, #d7e1ec 74%);
 }
 
-h1 {
+h1,
+h2,
+p {
     text-align: center;
     padding: 10px 5%;
     /* (top : 10px, bot: 5%) */
 }
 
-/* Container that encompasses the three divs */
+/* Container that encompasses all divs */
 .container {
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
+    background-color: #d66d6d;
 }
 
 /* First div (left) */
@@ -35,9 +38,17 @@ h1 {
     background: yellow;
 }
 
-/* Second div (middle, all buttons) */
-.SocialMediaButtons {
-    width: calc(95% - 261px);
+/* Div that contains the main content */
+.containerButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Divs on middle (middle, all buttons) */
+.SocialMediaButtons,
+.TvShowAndReading,
+.Games {
+    height: 80%;
     place-items: center;
     text-align: center;
 }
@@ -90,24 +101,24 @@ h1 {
 }
 
 
-.button:nth-child(1) span,
+.SocialMediaButtons .button:nth-child(1) span,
 .fa-github {
     /* Color of icon & span (Github) */
     color: #333;
 }
 
-.button:nth-child(1):hover .icon {
+.SocialMediaButtons .button:nth-of-type(1):hover .icon {
     /* Color of icon background (Github) during a hover */
     background: #333;
 }
 
-.button:nth-child(2) span,
+.button:nth-child(2n) span,
 .fa-twitter {
     /* Color of icon & span (Twitter) */
     color: #1D9BF0;
 }
 
-.button:nth-child(2):hover .icon {
+.button:nth-child(2n):hover .icon {
     /* Color of icon background (Twitter) during a hover */
     background: #1D9BF0;
 }
