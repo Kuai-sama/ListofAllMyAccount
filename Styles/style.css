@@ -25,53 +25,56 @@ p {
     /* (top : 10px, bot: 5%) */
 }
 
-/* Container that encompasses all divs */
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: #d66d6d;
+img {
+    width: auto;
+    height: auto;
+    vertical-align: middle;
 }
 
+/* Container that encompasses all divs */
+.container {
+    width: 90%;
+    margin: 0 5%;
+    background-color: #D66D6D;
+}
 
 /* Divs on middle (middle, all buttons) */
 .SocialMediaButtons,
 .TvShowAndReading,
 .Games {
-    height: 80%;
-    place-items: center;
-    text-align: center;
+    display: flex;
+    align-self: stretch;
+    background-color: #66D6D6;
+    border: #D66D6D solid 1px;
+
+    justify-content: center;
+    transition: 1s;
 }
 
 .button {
-    display: inline-block;
     height: 60px;
     width: 60px;
     margin: 0 5px;
+    border-radius: 50px;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
 
     overflow: hidden;
     cursor: pointer;
 
-    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
     transition: all 0.3s ease-out;
-    background-color: #fff;
+    background: #fff;
 }
 
 .button .icon,
 .button .iconLocal {
-    display: inline-block;
     height: 60px;
-    width: 60px;
     text-align: center;
     line-height: 60px;
     font-size: 30px;
-
-    border-radius: 50px;
-    transition: all 0.3s ease-out;
 }
 
 .button span {
+    display: none;
     font-size: 20px;
     font-weight: 500;
     line-height: 60px;
@@ -79,158 +82,157 @@ p {
     transition: all 0.3s ease-out;
 }
 
+.button .o {
+    margin-left: 0px;
+}
+
 .button:hover {
     width: 200px;
 }
 
+.button:hover span {
+    display: inline;
+}
 
-.SocialMediaButtons .button:nth-child(1) span,
+
 .fa-github {
-    /* Color of icon & span (Github) */
+    /* Color of icon (Github) */
     color: #333;
 }
 
-.SocialMediaButtons .button:nth-of-type(1):hover .icon {
-    /* Color of icon background (Github) during a hover */
+.button:nth-of-type(1):hover {
+    /* Color of button background (Github) during a hover */
     background: #333;
 }
 
-.button:nth-child(2n) span,
 .fa-twitter {
-    /* Color of icon & span (Twitter) */
+    /* Color of icon (Twitter) */
     color: #1D9BF0;
 }
 
-.button:nth-child(2n):hover .icon {
-    /* Color of icon background (Twitter) during a hover */
+.button:nth-child(2):hover {
+    /* Color of button background (Twitter) during a hover */
     background: #1D9BF0;
 }
 
-.button:nth-child(3) span,
 .fa-instagram {
-    /* Gradiant color of icon & span (Insta) */
+    /* Gradiant color of icon (Insta) */
     background-image: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
 }
 
-.button:nth-child(3):hover .icon {
-    /* Gradiant color of icon background (Insta) during a hover */
+.button:nth-child(3):hover {
+    /* Gradiant color of button background (Insta) during a hover */
     background-image: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
 
-.button:nth-child(3):hover .icon .fa-instagram {
-    /* Color of icon and it background (Insta) during a hover */
-    background: transparent;
-    color: whitesmoke;
-}
-
-.button:nth-child(4) span,
 .fa-youtube {
-    /* Color of icon & span (Youtube) */
+    /* Color of icon (Youtube) */
     color: #ff0000;
 }
 
-.button:nth-child(4):hover .icon {
-    /* Color of background icon (Youtube) during a hover */
+.button:nth-child(4):hover {
+    /* Color of button background (Youtube) during a hover */
     background: #ff0000;
 }
 
-.fa-tiktok,
-.button:nth-child(5) span .o {
-    /* Anaglyph color of icon and the letter "o" in "Tiktok" (TikTok) */
-    color: #111111;
+.fa-tiktok {
+    /* Anaglyph color of icon (TikTok) */
+    color: #111;
     filter: drop-shadow(1px 0px 0px #FD3E3E) drop-shadow(-1px -1px 0px #4DE8F4);
     margin-left: initial;
 }
 
-.button:nth-child(5) span {
-    /* Color of span (TikTok, all letters without "o" in "Tiktok") */
-    color: #111111;
+.button:nth-child(5) span .o {
+    /* Anaglyph color the letter "o" in "Tiktok" (TikTok) */
+    color: #FFF;
+    filter: drop-shadow(0.5px 0px 0px #FD3E3E) drop-shadow(-0.5px -.5px 0px #4DE8F4);
+    margin-left: initial;
 }
 
-.button:nth-child(5):hover .icon {
-    /* Color of icon background (Tiktok) during a hover */
-    background: #111111;
+.button:nth-child(5):hover {
+    /* Color of button background (Tiktok) during a hover */
+    background: #333;
 }
 
-.button:nth-child(6) span,
 .fa-twitch {
-    /* Color of icon & span (Twitch) */
+    /* Color of icon (Twitch) */
     color: #6441A5;
 }
 
-.button:nth-child(6):hover .icon {
-    /* Color of icon background (Twitch) */
+.button:nth-child(6):hover {
+    /* Color of button background (Twitch) */
     background: #6441A5;
 }
 
-.button:nth-child(7) span,
 .fa-spotify {
-    /* Color of icon & span (Spotify) */
+    /* Color of icon (Spotify) */
     color: #1DB954;
 }
 
-.button:nth-child(7):hover .icon {
-    /* Color of icon background (Spotify) during a hover */
+.button:nth-child(7):hover {
+    /* Color of button background (Spotify) during a hover */
     background: #1DB954;
 }
 
-.button:nth-child(8) span,
 .fa-snapchat {
-    /* Color of icon & span (Snapchat) */
+    /* Color of icon (Snapchat) */
     color: #FFFC00;
-
 }
 
-.button:nth-child(8):hover .icon {
-    /* Color of icon background (Snapchat) during a hover */
+.button:nth-child(8):hover {
+    /* Color of button background (Snapchat) during a hover */
     background: #FFFC00;
 }
 
-.button:nth-child(9) span,
+.button:nth-child(8):hover span,
+.button:nth-child(8):hover {
+    /* Color of span & button (add shadow effect) (Snapchat) */
+    text-shadow: 0.5px 0 0 #000, 0 -0.5px 0 #000, 0 0.5px 0 #000, -0.5px 0 0 #000;
+}
+
 .fa-discord {
-    /* Color of icon & span (Discord) */
+    /* Color of icon (Discord) */
     color: #7289DA;
 }
 
-.button:nth-child(9):hover .icon {
-    /* Color of icon background (Discord) during a hover */
+.button:nth-child(9):hover {
+    /* Color of button background (Discord) during a hover */
     background: #7289DA;
 }
 
-.button:nth-child(10) span {
-    /* Color of span (TvTime) */
-    color: #F9D457;
+.TvShowAndReading .button:nth-child(1):hover {
+    /* Color of background button (TvTime) during a hover */
+    background: #F9D457;
 }
 
-.button:nth-child(11) span {
-    /* Color of span (MyAnimeList) */
-    color: #2E51A2;
+.TvShowAndReading .button:nth-child(2):hover {
+    /* Color of background button (MyAnimeList) during a hover */
+    background: #2E51A2;
 }
 
-.button:nth-child(12) span {
-    /* Color of span (Anilist) */
-    color: #1E2630;
+.TvShowAndReading .button:nth-child(3):hover {
+    /* Color of background button (Anilist) during a hover */
+    background: #1E2630;
 }
 
-.button:nth-child(13) span {
-    /* Color of span (Gleeph) */
-    color: #252525;
+.TvShowAndReading .button:nth-child(4):hover {
+    /* Color of background button (Gleeph) during a hover */
+    background: #252525;
 }
 
-.button:nth-child(14) span {
-    /* Color of span (Wattpad) */
-    color: #FF4F0B;
+.TvShowAndReading .button:nth-child(5):hover {
+    /* Color of background button (Wattpad) during a hover */
+    background: #FF4F0B;
 }
 
-.button:nth-child(15) span {
-    /* Color of span (Epic Games) */
-    color: #333;
+.Games .button:nth-child(1):hover {
+    /* Color of background button (Epic games) during a hover */
+    background: #333;
 }
 
-.button:nth-child(16) span,
 .fa-steam {
     /* Gradient color of icon & span (Steam) */
     background-image: linear-gradient(120deg, #00ADEE, #000);
@@ -239,29 +241,25 @@ p {
     color: transparent;
 }
 
-.button:nth-child(16):hover .icon {
-    /* Gradient color of icon background (Steam) during a hover */
+.Games .button:nth-child(2):hover {
+    /* Gradient color of button background (Steam) during a hover */
     background-image: linear-gradient(120deg, #00ADEE, #000);
 }
 
-.button:nth-child(16):hover .icon.fa-steam {
-    /* Color of icon (Steam) during a hover */
-    background: transparent;
-    color: whitesmoke;
+.Games .button:nth-child(3):hover {
+    /* Color of background button (GOG) during a hover */
+    background: #0f0f0f;
 }
 
-.button:nth-child(17) span {
-    /* Color of the span (Gog) */
-    color: #0f0f0f;
-}
-
-.button:nth-child(18) span {
-    /* Color of the span (Uplay) */
-    color: #788532;
+.Games .button:nth-child(4):hover {
+    /* Color of background button (Uplay) during a hover 
+    I couldn't find gradient colors that look like to uplay logo*/
+    background: #788532;
 }
 
 /****************************************/
-.button:hover .fab {
-    /* Color of icons during a hover */
+.button:hover .fab,
+.button span {
+    /* Color of icons & span by defaut and during a hover */
     color: whitesmoke;
 }
