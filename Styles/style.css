@@ -28,21 +28,11 @@ p {
 /* Container that encompasses all divs */
 .container {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     background-color: #d66d6d;
 }
 
-/* First div (left) */
-.left {
-    width: 5%;
-    background: yellow;
-}
-
-/* Div that contains the main content */
-.containerButtons {
-    display: flex;
-    flex-direction: column;
-}
 
 /* Divs on middle (middle, all buttons) */
 .SocialMediaButtons,
@@ -51,13 +41,6 @@ p {
     height: 80%;
     place-items: center;
     text-align: center;
-}
-
-/* Third div (right) */
-.right {
-    background-color: lightblue;
-    width: 261px;
-    max-width: 261px;
 }
 
 .button {
