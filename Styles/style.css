@@ -27,10 +27,12 @@
 
 html,
 body {
+    display: grid;
     font-family: "Poppins", sans-serif;
     height: 100%;
     width: 100%;
     background: linear-gradient(315deg, #fff 0%, #d7e1ec 74%);
+    align-items: center;
 }
 
 h1,
@@ -59,7 +61,6 @@ img {
 .Games {
     display: flex;
     background-color: #66D6D6;
-    border: #D66D6D solid 1px;
 
     justify-content: center;
     transition: 1s;
