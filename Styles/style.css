@@ -44,8 +44,8 @@ p {
 }
 
 img {
-    width: auto;
-    height: auto;
+    max-width: 30px;
+    object-fit: cover;
     vertical-align: middle;
 }
 
@@ -115,7 +115,7 @@ img {
     color: #333;
 }
 
-.button:nth-of-type(1):hover {
+.SocialMediaButtons .button:nth-child(1):hover {
     /* Color of button background (Github) during a hover */
     background: #333;
 }
@@ -125,7 +125,7 @@ img {
     color: #1D9BF0;
 }
 
-.button:nth-child(2):hover {
+.SocialMediaButtons .button:nth-child(2):hover {
     /* Color of button background (Twitter) during a hover */
     background: #1D9BF0;
 }
@@ -138,7 +138,7 @@ img {
     color: transparent;
 }
 
-.button:nth-child(3):hover {
+.SocialMediaButtons .button:nth-child(3):hover {
     /* Gradiant color of button background (Insta) during a hover */
     background-image: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
 }
@@ -148,7 +148,7 @@ img {
     color: #ff0000;
 }
 
-.button:nth-child(4):hover {
+.SocialMediaButtons .button:nth-child(4):hover {
     /* Color of button background (Youtube) during a hover */
     background: #ff0000;
 }
@@ -160,14 +160,19 @@ img {
     margin-left: initial;
 }
 
-.button:nth-child(5) span .o {
+.SocialMediaButtons .button:nth-child(5) span {
+    /* Anaglyph color the letter "o" in "Tiktok" (TikTok) */
+    letter-spacing: 2px;
+}
+
+.SocialMediaButtons .button:nth-child(5) span .o {
     /* Anaglyph color the letter "o" in "Tiktok" (TikTok) */
     color: #FFF;
     filter: drop-shadow(0.5px 0px 0px #FD3E3E) drop-shadow(-0.5px -.5px 0px #4DE8F4);
     margin-left: initial;
 }
 
-.button:nth-child(5):hover {
+.SocialMediaButtons .button:nth-child(5):hover {
     /* Color of button background (Tiktok) during a hover */
     background: #333;
 }
@@ -177,7 +182,7 @@ img {
     color: #6441A5;
 }
 
-.button:nth-child(6):hover {
+.SocialMediaButtons .button:nth-child(6):hover {
     /* Color of button background (Twitch) */
     background: #6441A5;
 }
@@ -187,7 +192,7 @@ img {
     color: #1DB954;
 }
 
-.button:nth-child(7):hover {
+.SocialMediaButtons .button:nth-child(7):hover {
     /* Color of button background (Spotify) during a hover */
     background: #1DB954;
 }
@@ -197,15 +202,9 @@ img {
     color: #FFFC00;
 }
 
-.button:nth-child(8):hover {
+.SocialMediaButtons .button:nth-child(8):hover {
     /* Color of button background (Snapchat) during a hover */
     background: #FFFC00;
-}
-
-.button:nth-child(8):hover span,
-.button:nth-child(8):hover {
-    /* Color of span & button (add shadow effect) (Snapchat) */
-    text-shadow: 0.5px 0 0 #000, 0 -0.5px 0 #000, 0 0.5px 0 #000, -0.5px 0 0 #000;
 }
 
 .fa-discord {
@@ -213,7 +212,7 @@ img {
     color: #7289DA;
 }
 
-.button:nth-child(9):hover {
+.SocialMediaButtons .button:nth-child(9):hover {
     /* Color of button background (Discord) during a hover */
     background: #7289DA;
 }
@@ -223,9 +222,19 @@ img {
     background: #F9D457;
 }
 
+.TvShowAndReading .button:nth-child(1):hover .iconLocal img {
+    /* A compléter */
+    content: url(../img/TvTimeHover.png);
+}
+
 .TvShowAndReading .button:nth-child(2):hover {
     /* Color of background button (MyAnimeList) during a hover */
     background: #2E51A2;
+}
+
+.TvShowAndReading .button:nth-child(2):hover .iconLocal img {
+    /* A compléter */
+    content: url(../img/MyAnimeListHover.png);
 }
 
 .TvShowAndReading .button:nth-child(3):hover {
@@ -233,9 +242,19 @@ img {
     background: #1E2630;
 }
 
+.TvShowAndReading .button:nth-child(3):hover .iconLocal img {
+    /* A compléter */
+    content: url(../img/AnilistHover.png);
+}
+
 .TvShowAndReading .button:nth-child(4):hover {
     /* Color of background button (Gleeph) during a hover */
     background: #252525;
+}
+
+.TvShowAndReading .button:nth-child(4):hover .iconLocal img {
+    /* A compléter */
+    content: url(../img/GleephHover.png);
 }
 
 .TvShowAndReading .button:nth-child(5):hover {
@@ -243,9 +262,19 @@ img {
     background: #FF4F0B;
 }
 
+.TvShowAndReading .button:nth-child(5):hover .iconLocal img {
+    /* A compléter */
+    content: url(../img/WattpadHover.png);
+}
+
 .Games .button:nth-child(1):hover {
     /* Color of background button (Epic games) during a hover */
     background: #333;
+}
+
+.Games .button:nth-child(1):hover .iconLocal img {
+    /* A compléter */
+    content: url(../img/EpicGamesHover.png);
 }
 
 .fa-steam {
@@ -266,10 +295,19 @@ img {
     background: #0f0f0f;
 }
 
+.Games .button:nth-child(3):hover .iconLocal img {
+    /* A compléter */
+    content: url(../img/GogHover.png);
+}
+
 .Games .button:nth-child(4):hover {
-    /* Color of background button (Uplay) during a hover 
-    I couldn't find gradient colors that look like to uplay logo*/
-    background: #788532;
+    /* Color of background button (Uplay) during a hover */
+    background-image: conic-gradient(from 358deg at center center, #84343e 20%, #758237 30%, #2e8486 70%, #353687 80%);
+}
+
+.Games .button:nth-child(4):hover .iconLocal img {
+    /* A compléter */
+    content: url(../img/UplayHover.png);
 }
 
 /****************************************/
@@ -277,4 +315,5 @@ img {
 .button span {
     /* Color of icons & span by defaut and during a hover */
     color: whitesmoke;
+    text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
 }
