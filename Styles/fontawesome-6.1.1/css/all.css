@@ -1,0 +1,61 @@
+/* !
+ * This CSS is a Font Awesome modified version of the original CSS.
+ * Font Awesome Free 6.1.1 by @fontawesome - https://fontawesome.com
+ * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
+ * Copyright 2022 Fonticons, Inc.
+ */
+
+@font-face {
+  font-family: 'Font Awesome 6 Brands';
+  src: url("../webfonts/fa-brands-400.woff2") format("woff2"), url("../webfonts/fa-brands-400.ttf") format("truetype");
+}
+
+.fab,
+.fa-brands {
+  font-family: 'Font Awesome 6 Brands';
+}
+
+.fa,
+.fab {
+  font-style: normal;
+}
+
+.fa-youtube:before {
+  content: "\f167";
+}
+
+.fa-twitch:before {
+  content: "\f1e8";
+}
+
+.fa-twitter:before {
+  content: "\f099";
+}
+
+.fa-github:before {
+  content: "\f09b";
+}
+
+.fa-steam:before {
+  content: "\f1b6";
+}
+
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+.fa-spotify:before {
+  content: "\f1bc";
+}
+
+.fa-snapchat:before {
+  content: "\f2ab";
+}
+
+.fa-discord:before {
+  content: "\f392";
+}
+
+.fa-tiktok:before {
+  content: "\e07b";
+}
